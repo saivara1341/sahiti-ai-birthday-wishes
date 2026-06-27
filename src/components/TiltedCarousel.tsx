@@ -3,10 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const IMAGES = [
-  '/assets/carousel1.jpg',
-  '/assets/carousel2.jpg',
-  '/assets/carousel3.jpg',
-  '/assets/carousel4.jpg'
+  '/assets/img_1.jpeg',
+  '/assets/img_2.jpeg',
+  '/assets/img_3.jpeg',
+  '/assets/img_4.jpeg',
+  '/assets/img_5.jpeg',
+  '/assets/img_6.jpeg'
 ];
 
 const TiltedCarousel = () => {
@@ -66,13 +68,13 @@ const TiltedCarousel = () => {
       <div className="flex space-x-6 relative z-20">
         <button
           onClick={prevSlide}
-          className="p-4 bg-white/50 backdrop-blur-md border border-white/60 shadow-lg rounded-full hover:bg-white/70 hover:shadow-xl hover:-translate-y-1 transition-all active:scale-95 text-pink-900 hover:text-pink-600"
+          className="p-4 bg-white/10 backdrop-blur-md border border-white/20 shadow-lg rounded-full hover:bg-white/20 hover:shadow-xl hover:-translate-y-1 transition-all active:scale-95 text-white"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
         <button
           onClick={nextSlide}
-          className="p-4 bg-white/50 backdrop-blur-md border border-white/60 shadow-lg rounded-full hover:bg-white/70 hover:shadow-xl hover:-translate-y-1 transition-all active:scale-95 text-pink-900 hover:text-pink-600"
+          className="p-4 bg-white/10 backdrop-blur-md border border-white/20 shadow-lg rounded-full hover:bg-white/20 hover:shadow-xl hover:-translate-y-1 transition-all active:scale-95 text-white"
         >
           <ChevronRight className="w-6 h-6" />
         </button>
