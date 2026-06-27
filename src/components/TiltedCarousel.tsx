@@ -8,7 +8,14 @@ const IMAGES = [
   '/assets/img_3.jpeg',
   '/assets/img_4.jpeg',
   '/assets/img_5.jpeg',
-  '/assets/img_6.jpeg'
+  '/assets/img_6.jpeg',
+  '/assets/img_9.jpg',
+  '/assets/img_10.jpg',
+  '/assets/img_11.jpg',
+  '/assets/img_12.jpg',
+  '/assets/img_13.jpg',
+  '/assets/img_14.jpeg',
+  '/assets/img_15.jpeg'
 ];
 
 const TiltedCarousel = () => {
