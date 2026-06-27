@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Gift, Sparkles, Crown } from 'lucide-react';
+import { CalendarDays, Heart, Sparkles, Image as ImageIcon, MessageSquare, Gift, CheckCircle2 } from "lucide-react";
+import HeartAnimation from "../components/HeartAnimation";
 import YearButtons from '../components/YearButtons';
 import TiltedCarousel from '../components/TiltedCarousel';
 import ParallaxHeroCard from '../components/ParallaxHeroCard';
@@ -47,6 +48,7 @@ const yearData: Record<number, { title: string; description: string; imageUrl?: 
 
 const Index = () => {
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
+  const [isCelebrating, setIsCelebrating] = useState(false);
 
   const handleYearClick = (year: number) => {
     setSelectedYear(year);
@@ -76,8 +78,12 @@ const Index = () => {
           </div>
         </div>
         <div className="flex items-center">
-          <button className="px-6 py-2 text-sm font-bold text-[#2A1C16] bg-white rounded-full shadow-lg hover:shadow-xl hover:shadow-white/20 hover:-translate-y-0.5 transition-all active:scale-95">
-            Celebrate
+          <button 
+            onClick={() => setIsCelebrating(true)}
+            className="flex items-center space-x-2 bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-full transition-all backdrop-blur-md active:scale-95"
+          >
+            <Sparkles className="w-4 h-4" />
+            <span className="font-medium">Celebrate</span>
           </button>
         </div>
       </nav>
@@ -249,6 +255,8 @@ const Index = () => {
           </div>
         </DialogContent>
       </Dialog>
+      
+      {isCelebrating && <HeartAnimation onClose={() => setIsCelebrating(false)} />}
     </div>
   );
 };

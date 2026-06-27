@@ -45,7 +45,7 @@ const ParallaxHeroCard: React.FC<ParallaxHeroCardProps> = ({ children }) => {
         rotateY,
         transformStyle: "preserve-3d",
       }}
-      className="relative w-full max-w-4xl mx-auto rounded-3xl bg-white/30 backdrop-blur-md border border-white/60 shadow-2xl p-12 md:p-24 flex items-center justify-center cursor-pointer"
+      className="relative w-full max-w-5xl mx-auto p-4 md:p-12 flex items-center justify-center cursor-pointer"
     >
       <div
         style={{
