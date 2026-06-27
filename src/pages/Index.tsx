@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CalendarDays, Heart, Sparkles, Image as ImageIcon, MessageSquare, Gift, CheckCircle2 } from "lucide-react";
+import { CalendarDays, Heart, Sparkles, Image as ImageIcon, MessageSquare, Gift, CheckCircle2, Crown } from "lucide-react";
 import HeartAnimation from "../components/HeartAnimation";
 import YearButtons from '../components/YearButtons';
 import TiltedCarousel from '../components/TiltedCarousel';
