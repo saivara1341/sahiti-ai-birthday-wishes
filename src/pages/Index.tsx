@@ -28,14 +28,14 @@ const yearData: Record<number, { title: string; description: string; imageUrl?: 
     title: "A Journey Continues", 
     description: "Explore the special memories and wishes we've gathered for 2024.",
     linkUrl: "https://finalone-kappa.vercel.app",
-    linkText: "Tap here: View 2024 Memories"
+    linkText: "Tap here: View 2024 Memories",
+    imageUrl: "/assets/img_8.jpeg"
   },
   2025: { 
     title: "For You!", 
     description: "Happy Birthday to the most incredible person in my life! On this special day, I want to express just how much you mean to me.",
     linkUrl: "https://sahiti-ai.vercel.app/",
-    linkText: "Experience The Gift",
-    imageUrl: "/assets/img_8.jpeg"
+    linkText: "Experience The Gift"
   },
   2026: {
     title: "A Star Was Born",
