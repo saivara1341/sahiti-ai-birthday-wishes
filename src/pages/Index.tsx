@@ -49,6 +49,7 @@ const yearData: Record<number, { title: string; description: string; imageUrl?: 
 const Index = () => {
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
   const [isCelebrating, setIsCelebrating] = useState(false);
+  const is2026Released = new Date() >= new Date('2026-06-30T14:00:00+05:30');
 
   const handleYearClick = (year: number) => {
     setSelectedYear(year);
@@ -131,12 +132,16 @@ const Index = () => {
           </div>
           <div className="max-w-2xl relative z-10">
             <h3 className="text-3xl font-bold text-white mb-4 tracking-tight">2026 Birthday Magazine</h3>
-            <p className="text-lg text-white/80 mb-8 leading-relaxed">Grab your limited edition copy of the magazine completely focused on you, featuring amazing moments and celebrity appearances!</p>
+            <p className="text-lg text-white/80 mb-8 leading-relaxed">
+              {is2026Released 
+                ? "Grab your limited edition copy of the magazine completely focused on you, featuring amazing moments and celebrity appearances!"
+                : "Stay tuned for the 2026 Birthday Magazine releasing on June 30th at 2:00 PM!"}
+            </p>
             <button 
-              onClick={() => handleYearClick(2026)}
-              className="px-8 py-3 text-lg font-bold text-[#2A1C16] bg-white rounded-full shadow-lg shadow-black/10 hover:shadow-xl hover:shadow-white/20 hover:-translate-y-0.5 transition-all active:scale-95 uppercase tracking-widest"
+              onClick={() => is2026Released && handleYearClick(2026)}
+              className={`px-8 py-3 text-lg font-bold text-[#2A1C16] bg-white rounded-full shadow-lg shadow-black/10 transition-all uppercase tracking-widest ${is2026Released ? 'hover:shadow-xl hover:shadow-white/20 hover:-translate-y-0.5 active:scale-95' : 'opacity-50 cursor-not-allowed'}`}
             >
-              Read Now
+              {is2026Released ? "Read Now" : "Stay Tuned"}
             </button>
           </div>
         </section>
