@@ -126,25 +126,25 @@ const Index = () => {
         </section>
 
         {/* Magazine Preview Section */}
-        <section className="bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden group">
-          <div className="absolute -top-12 -right-12 p-4 transition-transform duration-700 group-hover:scale-110">
-            <Crown className="w-64 h-64 text-white/5 rotate-12" />
-          </div>
-          <div className="max-w-2xl relative z-10">
-            <h3 className="text-3xl font-bold text-white mb-4 tracking-tight">2026 Birthday Magazine</h3>
-            <p className="text-lg text-white/80 mb-8 leading-relaxed">
-              {is2026Released 
-                ? "Grab your limited edition copy of the magazine completely focused on you, featuring amazing moments and celebrity appearances!"
-                : "Stay tuned for the 2026 Birthday Magazine releasing on June 30th at 2:00 PM!"}
-            </p>
-            <button 
-              onClick={() => is2026Released && handleYearClick(2026)}
-              className={`px-8 py-3 text-lg font-bold text-[#2A1C16] bg-white rounded-full shadow-lg shadow-black/10 transition-all uppercase tracking-widest ${is2026Released ? 'hover:shadow-xl hover:shadow-white/20 hover:-translate-y-0.5 active:scale-95' : 'opacity-50 cursor-not-allowed'}`}
-            >
-              {is2026Released ? "Read Now" : "Stay Tuned"}
-            </button>
-          </div>
-        </section>
+        {is2026Released && (
+          <section className="bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden group">
+            <div className="absolute -top-12 -right-12 p-4 transition-transform duration-700 group-hover:scale-110">
+              <Crown className="w-64 h-64 text-white/5 rotate-12" />
+            </div>
+            <div className="max-w-2xl relative z-10">
+              <h3 className="text-3xl font-bold text-white mb-4 tracking-tight">2026 Birthday Magazine</h3>
+              <p className="text-lg text-white/80 mb-8 leading-relaxed">
+                Grab your limited edition copy of the magazine completely focused on you, featuring amazing moments and celebrity appearances!
+              </p>
+              <button 
+                onClick={() => handleYearClick(2026)}
+                className="px-8 py-3 text-lg font-bold text-[#2A1C16] bg-white rounded-full shadow-lg shadow-black/10 transition-all uppercase tracking-widest hover:shadow-xl hover:shadow-white/20 hover:-translate-y-0.5 active:scale-95"
+              >
+                Read Now
+              </button>
+            </div>
+          </section>
+        )}
 
         {/* 3D Wonderful Text */}
         <section>
